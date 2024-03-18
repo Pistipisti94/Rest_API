@@ -1,6 +1,6 @@
 <?php
 $SQL = '';
-echo '<h1>ÜGYFELEK</h1>';
+echo '<center><h1>get ÜGYFELEK</h1></center>';
 //Összes ügyfél adatai JSON-ben
 if (count($keresSzoveg) > 1) {
     if(is_int(intval($keresSzoveg[1])))

@@ -1,11 +1,12 @@
 <?php
 switch ($_SERVER['REQUEST_METHOD']) {
-    case 'GET':       
+    case 'GET':
         require_once 'ugyfel/getUgyfelek.php';
         break;
 
     case 'POST':
-        # code...
+        require_once 'ugyfel/postUgyfel.php';
+
         break;
     case 'PUT':
         # code...
