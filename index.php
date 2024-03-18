@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-    
+    phpinfo("Rest API Backend");
     ?>
 </body>
 </html>
