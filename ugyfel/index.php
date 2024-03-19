@@ -12,7 +12,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         # code...
         break;
     case 'DELETE':
-        # code...
+        require_once 'ugyfel/deleteUgyfel.php';
         break;
 
     default:

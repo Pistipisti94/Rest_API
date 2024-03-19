@@ -10,7 +10,7 @@ $szulev = 1888;
 $irszam = 4004;
 $orsz = "Ro";
 require_once './database.php';
-$SQL = "Insert into ugyfel (azon, nev, szulev, irszam, orsz) values ($azon, $nev, $szulev, $irszam, $orsz)";
+$SQL = "Insert into ugyfel (azon, nev, szulev, irszam, orsz) values (?, ?, ?, ?, ?)";
 $stmt = $connection->prepare($SQL);
 $stmt->bind_param("isiis", $azon,$nev,$szulev,$irszam,$orsz);
 if ($stmt->execute()) {
@@ -20,4 +20,3 @@ echo 'Sikeresen hozzáadva';
 http_response_code(404);
 echo'Nope';
 }
-echo '<center><h1>post ÜGYFELEK</h1></center>';
