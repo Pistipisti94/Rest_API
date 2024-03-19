@@ -10,7 +10,6 @@ $stmt = $connection->prepare($SQL);
 $stmt->bind_param("siis",$nev,$szulev,$irszam,$orsz);
 if ($stmt->execute()) {
 http_response_code(201);
-echo 'Sikeresen hozzáadva';
 }else {
 http_response_code(404);
 echo'Nope';

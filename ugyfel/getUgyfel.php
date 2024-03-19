@@ -1,11 +1,9 @@
 <?php
 $SQL = '';
-echo '<center><h1>get ÜGYFELEK</h1></center>';
 //Összes ügyfél adatai JSON-ben
 if (count($keresSzoveg) > 1) {
     if(is_int(intval($keresSzoveg[1])))
     {
-        echo 'Ügyfél: ' . $keresSzoveg[1];
         $SQL = 'SELECT * FROM ugyfel WHERE azon = ' .  $keresSzoveg[1];
     }
     else
@@ -17,9 +15,7 @@ if (count($keresSzoveg) > 1) {
     }
 
 } else {
-    echo '<pre>';
     $SQL = 'SELECT * FROM ugyfel where 1';
-    echo '</pre>';
 }
 require_once './database.php';
 $result = $connection->query($SQL);
