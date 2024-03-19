@@ -1,0 +1,17 @@
+<?php
+$azon = 2008;
+$nev = "PalMa";
+$szulev = 1888;
+$irszam = 4004;
+$orsz = "Ro";
+require_once './database.php';
+$SQL = "Insert into ugyfel (azon, nev, szulev, irszam, orsz) values (?, ?, ?, ?, ?)";
+$stmt = $connection->prepare($SQL);
+$stmt->bind_param("isiis", $azon,$nev,$szulev,$irszam,$orsz);
+if ($stmt->execute()) {
+http_response_code(201);
+echo 'Sikeresen hozzáadva';
+}else {
+http_response_code(404);
+echo'Nope';
+}

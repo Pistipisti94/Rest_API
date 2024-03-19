@@ -9,7 +9,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         break;
     case 'PUT':
-        # code...
+        require_once 'ugyfel/putUgyfel.php';
         break;
     case 'DELETE':
         require_once 'ugyfel/deleteUgyfel.php';

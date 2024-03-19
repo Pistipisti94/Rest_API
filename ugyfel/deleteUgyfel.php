@@ -1,5 +1,5 @@
 <?php
-$azon = 2008;
+$azon = $_POST["azon"];
 require_once './database.php';
 $SQL = "DELETE FROM `ugyfel` WHERE azon = ?" ;
 $stmt = $connection->prepare($SQL);
