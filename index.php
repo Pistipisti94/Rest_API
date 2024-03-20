@@ -1,6 +1,6 @@
 <?php 
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 header('Content-Type: application/json; charset=utf-8');
 
@@ -12,6 +12,6 @@ header('Content-Type: application/json; charset=utf-8');
     }else
     {
         http_response_code(404);
-        echo '404 Not Found';
-        echo 'Nincs ilyen API';
+        $JSONerror = array("message" => "Nincs ilyen API");
+        return json_encode($JSONerror); 
     }
